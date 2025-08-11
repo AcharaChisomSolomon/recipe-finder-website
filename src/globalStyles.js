@@ -19,7 +19,7 @@ export const GlobalStyles = css`
 
   :root {
     /* COLORS */
-    --neutral-900: #163b31ff;
+    --neutral-900: hsla(164, 46%, 16%, 1.00);
     --neutral-600: hsl(166, 22%, 28%);
     --neutral-300: hsl(160, 13%, 84%);
     --neutral-200: hsl(150, 10%, 89%);

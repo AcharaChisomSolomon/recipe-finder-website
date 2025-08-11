@@ -7,23 +7,28 @@ import RecipePage from './pages/RecipePage'
 import About from './pages/About'
 import Header from './Header'
 import Footer from './Footer'
+import RecipesContext from './recipesContext'
+
+import data from './data.json'
 
 function App() {
   return (
-    <Router>
+    <RecipesContext.Provider value={data}>
+      <Router>
 
-      <Header />
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/about" element={<About />} />
-        <Route path='/recipe/:name' element={<RecipePage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/about" element={<About />} />
+          <Route path='/recipe/:name' element={<RecipePage />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
 
-    </Router>
+      </Router>
+    </RecipesContext.Provider>
   )
 }
 

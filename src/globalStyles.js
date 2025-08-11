@@ -19,7 +19,7 @@ export const GlobalStyles = css`
 
   :root {
     /* COLORS */
-    --neutral-900: hsl(164, 45%, 16%);
+    --neutral-900: #163b31ff;
     --neutral-600: hsl(166, 22%, 28%);
     --neutral-300: hsl(160, 13%, 84%);
     --neutral-200: hsl(150, 10%, 89%);
@@ -141,6 +141,9 @@ export const GlobalStyles = css`
     text-wrap: balance;
     line-height: 1.1;
     letter-spacing: -2px;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 1.282vw + 2.019rem, 3rem);
   }
 
   /*

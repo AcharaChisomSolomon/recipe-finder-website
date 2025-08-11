@@ -6,6 +6,7 @@ import Recipes from './pages/Recipes'
 import RecipePage from './pages/RecipePage'
 import About from './pages/About'
 import Header from './Header'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='/recipe/:name' element={<RecipePage />} />
       </Routes>
-      
+
+      <Footer />
+
     </Router>
   )
 }

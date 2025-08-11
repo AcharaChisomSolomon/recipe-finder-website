@@ -65,6 +65,7 @@ const Wrapper = styled.header`
   padding-block: var(--spacing-0200);
   border-bottom: 1px solid var(--neutral-300);
   transition: padding 500ms;
+  margin-block-end: clamp(3rem, 2.817vw + 1.944rem, 6rem);
 
   @media (${QUERIES.tabletAndLarger}) {
     padding-block-start: var(--spacing-0400);
@@ -72,7 +73,7 @@ const Wrapper = styled.header`
   }
 
   @media (${QUERIES.laptopAndLarger}) {
-   padding-block: var(--spacing-0250);
+   padding-block: var(--spacing-0300);
   }
 `;
 
@@ -118,7 +119,9 @@ const Nav = styled.nav`
 const AlternateRecipes = styled.div`
   display: none;
   justify-self: end;
+  align-self: center;
   transition: transform 250ms;
+  height: max-content;
 
   a {
     background-color: var(--neutral-900);

@@ -4,12 +4,13 @@ import { Link, useParams } from "react-router-dom"
 import styled from "@emotion/styled"
 import RecipeCard from "./RecipeCard"
 import { getImage } from "../imageMap"
+import WidthUtil from "../WidthUtil"
 
 import IconServings from '../assets/images/icon-servings.svg'
 import IconPrepTime from '../assets/images/icon-prep-time.svg'
 import IconCookTime from '../assets/images/icon-cook-time.svg'
 import IconBulletPoint from '../assets/images/icon-bullet-point.svg'
-import { QUERIES } from "../constants"
+
 
 function getNextThreeRecipes(recipes, id) {
   const output = []
@@ -98,22 +99,20 @@ export default function RecipePage() {
 
       <Divider />
 
-      <section>
+      <WidthUtil>
         <SubTitle>More recipes</SubTitle>
         <RecipeCards>
           {nextRecipes.map(r => (<RecipeCard key={r.id} data={r} />))}
         </RecipeCards>
-      </section>
+      </WidthUtil>
+
+      <Divider_ />
 
     </Wrapper>
   )
 }
 
 const Wrapper = styled.main`
-  max-width: calc(1312 / 16 * 1rem);
-  margin: 0 auto;
-  padding-inline: clamp(1rem, 3.529vw + -0.324rem, 2.5rem);
-
   h3 {
     font-size: var(--fs-24);
     letter-spacing: -1px;
@@ -121,7 +120,7 @@ const Wrapper = styled.main`
   }
 `;
 
-const BreadCrumbs = styled.div`
+const BreadCrumbs = styled(WidthUtil)`
   font-size: var(--fs-18);
   letter-spacing: -0.3px;
   font-weight: var(--fw-semibold);
@@ -145,7 +144,7 @@ const Crumb = styled(Link)`
   }
 `;
 
-const MainContainer = styled.section`
+const MainContainer = styled(WidthUtil)`
   display: grid;
   gap: var(--spacing-0600) var(--spacing-0500);
 
@@ -197,11 +196,14 @@ const List = styled.li`
 
 const Divider = styled.hr`
   border: none;
-  width: calc(100% + clamp(1rem, 3.529vw + -0.324rem, 2.5rem) * 2);
   height: 2px;
   background-color: var(--neutral-300);
-  margin-inline-start: calc(-1 * clamp(1rem, 3.529vw + -0.324rem, 2.5rem));
   margin-block: clamp(3rem, 14.815vw + -8.333rem, 5rem);
+`;
+
+const Divider_ = styled(Divider)`
+  margin: 0;
+  margin-block-start: clamp(3rem, 22.222vw + -14rem, 6rem);
 `;
 
 const SubTitle = styled.h2`

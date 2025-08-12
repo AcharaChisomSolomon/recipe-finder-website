@@ -42,27 +42,31 @@ export default function Recipes() {
   }
 
   return (
-    <Wrapper>
+    <>
+      <Wrapper>
 
-      <TitularSection>
-        <Title>Explore our simple, healthy recipes</Title>
-        <p>
-          Discover eight quick, whole-food dishes that fit real-life schedules and taste amazing. 
-          Use the search bar to find a recipe by name or ingredient, 
-          or simply scroll the list and let something delicious catch your eye.
-        </p>
-      </TitularSection>
+        <TitularSection>
+          <Title>Explore our simple, healthy recipes</Title>
+          <p>
+            Discover eight quick, whole-food dishes that fit real-life schedules and taste amazing. 
+            Use the search bar to find a recipe by name or ingredient, 
+            or simply scroll the list and let something delicious catch your eye.
+          </p>
+        </TitularSection>
 
-      <InputSection 
-        searchTerms={searchTerms}
-        setSearchTerms={setSearchTerms}
-      />
+        <InputSection 
+          searchTerms={searchTerms}
+          setSearchTerms={setSearchTerms}
+        />
 
-      <RecipeCards>
-        {recipesToDisplay.map(r => (<RecipeCard key={r.id} data={r} />))}
-      </RecipeCards>
+        <RecipeCards>
+          {recipesToDisplay.map(r => (<RecipeCard key={r.id} data={r} />))}
+        </RecipeCards>
 
-    </Wrapper>
+      </Wrapper>
+
+      <Divider />
+    </>
   )
 }
 
@@ -90,4 +94,11 @@ const RecipeCards = styled.section`
   display: grid;
   gap: var(--spacing-0400);
   grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+`;
+
+const Divider = styled.hr`
+  border: none;
+  height: 2px;
+  background-color: var(--neutral-300);
+  margin-block-start: clamp(3rem, 22.222vw + -14rem, 6rem);
 `;

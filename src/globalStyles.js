@@ -144,6 +144,7 @@ export const GlobalStyles = css`
   }
   h1 {
     font-size: clamp(2.5rem, 1.282vw + 2.019rem, 3rem);
+    letter-spacing: -2px;
   }
 
   /*

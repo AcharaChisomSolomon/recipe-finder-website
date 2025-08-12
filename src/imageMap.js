@@ -56,22 +56,4 @@ export const getImage = (slug, size = 'large') => {
   return imageMap[slug]?.[size] || null
 }
 
-// Helper function to get all images for a slug
-export const getImages = (slug) => {
-  return imageMap[slug] || null
-}
-
-// Helper function for responsive images
-export const getResponsiveImageProps = (slug, alt = '') => {
-  const images = getImages(slug)
-  if (!images) return null
-  
-  return {
-    src: images.large,
-    srcSet: `${images.small} 400w, ${images.large} 800w`,
-    sizes: "(max-width: 400px) 400px, 800px",
-    alt: alt || slug.replace(/-/g, ' ')
-  }
-}
-
 export default imageMap

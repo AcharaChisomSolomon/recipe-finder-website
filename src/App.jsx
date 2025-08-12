@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Import your page components (create these as needed)
 import Home from './pages/Home'
 import Recipes from './pages/Recipes'
 import RecipePage from './pages/RecipePage'

@@ -7,6 +7,7 @@ import About from './pages/About'
 import Header from './Header'
 import Footer from './Footer'
 import RecipesContext from './recipesContext'
+import ScrollToTop from './ScrollToTop'
 
 import data from './data.json'
 
@@ -14,6 +15,8 @@ function App() {
   return (
     <RecipesContext.Provider value={data}>
       <Router>
+
+        <ScrollToTop />
 
         <Header />
 

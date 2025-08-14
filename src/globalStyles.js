@@ -26,7 +26,7 @@ export const GlobalStyles = css`
     --neutral-100: hsl(45, 20%, 95%);
     --neutral-000: hsl(0, 0%, 100%);
     --orange-500:  hsl(21, 98%, 71%);
-    --teal-500:    hsl(170, 40%, 48%);
+    --teal-500:    hsla(170, 40%, 48%, 0.1);
     --indigo-500:  hsl(230, 62%, 64%);
 
     /* SPACING */
@@ -141,10 +141,19 @@ export const GlobalStyles = css`
     text-wrap: balance;
     line-height: 1.1;
     letter-spacing: -2px;
+    font-family: var(--font-primary);
+    font-weight: var(--fw-extrabold);
   }
   h1 {
     font-size: clamp(2.5rem, 1.282vw + 2.019rem, 3rem);
-    letter-spacing: -2px;
+  }
+  h2 {
+    font-size: clamp(2.5rem, 1.333vw + 2rem, 3rem);
+  }
+  h3 {
+    font-size: var(--fs-32);
+    letter-spacing: -1px;
+    font-weight: var(--fw-bold);
   }
 
   /*

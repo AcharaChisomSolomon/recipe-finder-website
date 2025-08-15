@@ -155,6 +155,11 @@ export const GlobalStyles = css`
     letter-spacing: -1px;
     font-weight: var(--fw-bold);
   }
+  h4 {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-bold);
+    letter-spacing: -1px;
+  }
 
   /*
     10. Create a root stacking context

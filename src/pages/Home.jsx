@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { Link } from "react-router-dom";
 import { QUERIES } from "../constants";
 import SubFooter from "./SubFooter";
 import LinkButton from "../LinkButton";

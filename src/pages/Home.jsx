@@ -99,7 +99,7 @@ export default function Home() {
 }
 
 const Wrapper = styled.main`
-  background-image: url('/src/assets/images/pattern-squiggle-1.svg');
+  background-image: url('/images/pattern-squiggle-1.svg');
   background-repeat: no-repeat;
   background-position: center 25rem;
   background-size: contain;

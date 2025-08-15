@@ -24,7 +24,7 @@ const Wrapper = styled.section`
   justify-content: center;
   border-radius: var(--radius-0016);
 
-  background-image: url('/src/assets/images/pattern-fork.svg'), url('/src/assets/images/pattern-knife.svg');
+  background-image: url('/images/pattern-fork.svg'), url('/images/pattern-knife.svg');
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right top;
   background-size: 20%, 20%;
